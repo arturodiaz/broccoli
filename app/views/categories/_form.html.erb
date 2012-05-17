@@ -1,0 +1,7 @@
+<%= simple_form_for(@category) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.error :base %>
+  <%= f.button :submit %>
+<% end %>

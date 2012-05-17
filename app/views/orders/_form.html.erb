@@ -1,0 +1,8 @@
+<%= simple_form_for(@order) do |f| %>
+  <%= f.input :order_id %>
+  <%= f.input :description %>
+  <%= f.association :category %>
+  <%= f.input :issued_at %>
+  <%= f.input :closed_at %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_id: 1
+  description: MyText
+  category_id: 1
+  issued_at: 2012-05-16 15:07:25
+  closed_at: 2012-05-16 15:07:25
+
+two:
+  order_id: 1
+  description: MyText
+  category_id: 1
+  issued_at: 2012-05-16 15:07:25
+  closed_at: 2012-05-16 15:07:25
