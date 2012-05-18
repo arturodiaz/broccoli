@@ -4,9 +4,10 @@
   <tr>
     <th>Order</th>
     <th>Description</th>
-    <th>Category</th>
     <th>Issued at</th>
     <th>Closed at</th>
+    <th>Category</th>
+
     <th></th>
     <th></th>
     <th></th>
@@ -16,9 +17,9 @@
   <tr>
     <td><%= order.order_id %></td>
     <td><%= order.description %></td>
-    <td><%= order.issued_at %></td>
-    <td><%= order.closed_at %></td>
-    <td><%= category.title %></td>
+    <td><%= time_ago_in_words(order.issued_at, include_hours: true) %> ago</td>
+    <td>in <%= time_ago_in_words(order.closed_at) %></td>
+    <td><%= order.category.title %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>
@@ -29,3 +30,26 @@
 <br />
 
 <%= link_to 'New Order', new_order_path %>
+
+<style>
+table, td
+{
+    border-color: #600;
+    border-style: solid;
+}
+
+table
+{
+    border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td
+{
+    margin: 0;
+    padding: 4px;
+    border-width: 1px 1px 0 0;
+    background-color: #FFC;
+}
+</style>

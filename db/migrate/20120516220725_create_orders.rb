@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration
     create_table :orders do |t|
       t.integer :order_id
       t.text :description
-      t.integer :category_id
+      t.reference :category
       t.datetime :issued_at
       t.datetime :closed_at
 

@@ -1,4 +1,6 @@
 Broccoli::Application.routes.draw do
+  resources :suppliers
+
   resources :orders
 
   resources :categories
